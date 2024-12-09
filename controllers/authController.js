@@ -10,7 +10,6 @@ apiInstance.setApiKey(
   brevo.TransactionalEmailsApiApiKeys.apiKey,
   process.env.BREVO_API_KEY
 )
-
 const register = async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
@@ -37,7 +36,6 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   const { email, password } = req.body;
-
   try {
     const user = await User.findUserByEmail(email);
 
